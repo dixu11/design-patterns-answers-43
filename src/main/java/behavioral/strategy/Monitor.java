@@ -7,10 +7,12 @@ public class Monitor {
     private int secondsWithoutInput = 0;
     private final int secondsToScreenSaver; //po ilu sekundach uruchomić wygaszacz
     private final int secondsToShutdown; //po ilu sekundach wyłączyć ekran
+    private RenderStrategy renderStrategy;
 
     public Monitor(int secondsToScreenSaver, int secondsToShutdown) {
         this.secondsToScreenSaver = secondsToScreenSaver;
         this.secondsToShutdown = secondsToShutdown;
+        renderStrategy = new RenderScreenStrategy();
     }
 
     public void testMonitorFor(int seconds){
@@ -26,7 +28,7 @@ public class Monitor {
     }
 
     private void renderScreen() {
-        //TODO metodę należy dokończyć
+        renderStrategy.render();
     }
 
     private boolean hasUserInteracted() {
@@ -34,7 +36,13 @@ public class Monitor {
     }
 
     private void updateRenderStrategy() {
-      //TODO metodę należy dokończyć
+        if (secondsWithoutInput < secondsToScreenSaver) {
+            renderStrategy = new RenderScreenStrategy();
+        } else if (secondsWithoutInput < secondsToShutdown) {
+            renderStrategy = new RenderScreenSaverStrategy();
+        } else {
+            renderStrategy = new RenderNothingStrategy();
+        }
     }
 
 
