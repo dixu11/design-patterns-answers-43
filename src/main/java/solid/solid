@@ -1,0 +1,24 @@
+1. Single Responsibility
+ - małe klasy pełniące 1 funkcję
+    - małe klasy -> 0-150  (przy 200 uwaga!) (przy 300 - obowiązkowo dekompozycja)
+    - rozbija zadanie na 1 poziom abstrakcji niżej
+    - tylko jeden powód do zmiany
+      - obiekt działa tylko w jednym kontekscie np: dane wysyłane, dane do operacji logicznych, zapisywanie
+
+2. Open / close
+   - kod otwarty na rozszerzanie zamknięty na modyfikację
+     - dokładanie nowych funkcjonalności programu nie powinno wymagać zmianianie fragmentów
+        kodu w innych częsciach aplikacji
+
+3.  Liscov substitution principle
+    - metody referencji do klasy bazowej (Animal) powinny mieć sens dla każdej z implementacji (Lion)
+
+4.  Interface segregation principle
+    - interfejsy są najbardziej stabilną częscią systemu (wykorzystywane w wielu miejscach)
+        - w związku z tym muszą być możliwie małe żeby nie było potrzeby ich modyfikować a tylko dodawać nowe interfejsy lub metody
+
+5. Dependency inversion
+    - klasy wysokopoziomowe nie powinny zależeć od niskopoziomowych obie powinny zależeć od abstrakcji (rysunek!)
+
+
+
