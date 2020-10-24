@@ -18,7 +18,7 @@ public class Repository {
     }
 
     public static Repository getRepository() {
-        if (repository == null) { // lazy
+        if (repository == null) {
             repository = new Repository();
         }
         return repository;

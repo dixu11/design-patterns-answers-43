@@ -10,5 +10,9 @@ public class Demo {
         System.out.println("Czy takie same?");
         System.out.println(repository1 == repository2);
 
+        SingletonEnum enumowy1 = SingletonEnum.INSTANCE;
+        SingletonEnum enumowy2 = SingletonEnum.INSTANCE;
+        System.out.println("Czy takie same?");
+        System.out.println(enumowy1 == enumowy2);
     }
 }
