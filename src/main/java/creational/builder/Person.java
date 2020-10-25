@@ -6,39 +6,17 @@ import java.util.Objects;
 public class Person {
 
     private String fullName;
-    private LocalDate birthDate;
-    private int phone;
     private String mail;
     private String address;
 
-    public Person(String fullName, String mail, String address) {
+    private LocalDate birthDate;
+    private int phone;
+
+    private Person(String fullName, String mail, String address) {
         this.fullName = fullName;
         this.mail = mail;
         this.address = address;
     }
-
-    public Person(String fullName, LocalDate birthDate, int phone, String mail, String address) {
-        this.fullName = fullName;
-        this.birthDate = birthDate;
-        this.phone = phone;
-        this.mail = mail;
-        this.address = address;
-    }
-
-    public Person(String fullName, LocalDate birthDate, String mail, String address) {
-        this.fullName = fullName;
-        this.birthDate = birthDate;
-        this.mail = mail;
-        this.address = address;
-    }
-
-    public Person(String fullName, int phone, String mail, String address) {
-        this.fullName = fullName;
-        this.phone = phone;
-        this.mail = mail;
-        this.address = address;
-    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -65,4 +43,31 @@ public class Person {
                 ", address='" + address + '\'' +
                 '}';
     }
+
+
+    static class PersonBuilder{
+        private Person person;
+
+        public PersonBuilder(String fullName, String mail, String address){
+            person = new Person(fullName,mail,address);
+        }
+
+
+        public Person getPerson() {
+            return person;
+        }
+
+        public void setBirthDate(LocalDate birthDate){
+            person.birthDate = birthDate;
+        }
+
+        public void setPhone(int phone){
+            person.phone = phone;
+        }
+
+
+    }
+
 }
+
+
