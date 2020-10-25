@@ -12,6 +12,9 @@ public class Person {
     private LocalDate birthDate;
     private int phone;
 
+
+
+
     private Person(String fullName, String mail, String address) {
         this.fullName = fullName;
         this.mail = mail;

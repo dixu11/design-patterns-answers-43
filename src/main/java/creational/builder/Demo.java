@@ -13,6 +13,7 @@ public class Demo {
                 .withPhone(234234534)
                 .build();
 
+
         Person person2 = Person.buildDefaultPerson();
 
         System.out.println(person);
@@ -33,7 +34,6 @@ public class Demo {
         text.toUpperCase().substring(2).toLowerCase().length();*/
 
 
-        System.out.println(person);
 
 
         //1. prywatny konstruktor obiektu
