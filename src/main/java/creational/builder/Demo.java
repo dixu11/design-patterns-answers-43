@@ -9,14 +9,17 @@ public class Demo {
     public static void main(String[] args) {
         System.out.println("Test");
 
-        Person.PersonBuilder builder = new Person.PersonBuilder("Anna Markowska",
+        Person person = new Person.PersonBuilder("Anna Markowska",
                 "a.markowska22",
-                "Wojska Polskiego 2");
+                "Wojska Polskiego 2")
+                .setBirthDate(LocalDate.of(2000, 1, 2))
+                .setPhone(234234534)
+                .getPerson();
 
-        builder.setBirthDate(LocalDate.of(2000,1,2));
-        builder.setPhone(234234534);
 
-        Person person = builder.getPerson();
+
+
+
 
        /* List.of(23,34,456,56).stream()
                 .sorted()
@@ -38,7 +41,6 @@ public class Demo {
        /* Person person = new Person("Anna Markowska",
                 "a.markowska22",
                 "Wojska Polskiego 2");*/
-
 
 
         //wykonaj polecenie z ar
