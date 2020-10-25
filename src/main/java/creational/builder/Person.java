@@ -57,12 +57,14 @@ public class Person {
             return person;
         }
 
-        public void setBirthDate(LocalDate birthDate){
+        public PersonBuilder setBirthDate(LocalDate birthDate){
             person.birthDate = birthDate;
+            return this;
         }
 
-        public void setPhone(int phone){
+        public PersonBuilder setPhone(int phone){
             person.phone = phone;
+            return this;
         }
 
 
