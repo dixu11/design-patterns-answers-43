@@ -48,6 +48,13 @@ public class Person {
         return new PersonBuilder(fullName, mail, address);
     }
 
+    public static  Person buildDefaultPerson(){
+        return Person.buildCustomPerson("Jan Kowalski", "kowalski1234@gmail.com", "mickiewicza 1")
+                .bornIn(LocalDate.now().minusYears(18))
+                .withPhone(123465)
+                .build();
+    }
+
 
     static class PersonBuilder{
         private Person person;

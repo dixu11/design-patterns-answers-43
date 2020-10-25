@@ -13,6 +13,10 @@ public class Demo {
                 .withPhone(234234534)
                 .build();
 
+        Person person2 = Person.buildDefaultPerson();
+
+        System.out.println(person);
+        System.out.println(person2);
 
 
 
