@@ -22,6 +22,16 @@ public class Demo {
 
 
 
+       /* Obiekt obiekt1 = new Obiekt();
+        obiekt1.doStuff();
+
+        Obiekt wrapper= new Wrapper(new Obiekt());
+        wrapper.doStuff();*/
+
+
+
+
+
 
 
 
