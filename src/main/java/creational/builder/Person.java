@@ -44,6 +44,10 @@ public class Person {
                 '}';
     }
 
+    public static PersonBuilder buildCustomPerson(String fullName, String mail, String address) {
+        return new PersonBuilder(fullName, mail, address);
+    }
+
 
     static class PersonBuilder{
         private Person person;
@@ -53,16 +57,16 @@ public class Person {
         }
 
 
-        public Person getPerson() {
+        public Person build() {
             return person;
         }
 
-        public PersonBuilder setBirthDate(LocalDate birthDate){
+        public PersonBuilder bornIn(LocalDate birthDate){
             person.birthDate = birthDate;
             return this;
         }
 
-        public PersonBuilder setPhone(int phone){
+        public PersonBuilder withPhone(int phone){
             person.phone = phone;
             return this;
         }

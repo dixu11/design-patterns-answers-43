@@ -1,20 +1,19 @@
 package creational.builder;
 
-import com.sun.tools.javac.util.List;
-
 import java.time.LocalDate;
-import java.util.stream.Collectors;
 
 public class Demo {
     public static void main(String[] args) {
         System.out.println("Test");
 
-        Person person = new Person.PersonBuilder("Anna Markowska",
+        Person person = Person.buildCustomPerson("Anna Markowska",
                 "a.markowska22",
                 "Wojska Polskiego 2")
-                .setBirthDate(LocalDate.of(2000, 1, 2))
-                .setPhone(234234534)
-                .getPerson();
+                .bornIn(LocalDate.of(2000, 1, 2))
+                .withPhone(234234534)
+                .build();
+
+
 
 
 
